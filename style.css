@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
 * {
  padding: 0;
@@ -7,13 +7,20 @@
  color: white;
 }
 
-.container {
+.main-container {
  width: 100%;
  min-height: 100vh;
+ background-color: #2f363e;
  display: flex;
  justify-content: center;
  align-items: center;
- background-color: #2f363e;
+
+}
+
+.centralBox {
+ width: 700px;
+ height: 650px;
+ margin: auto;
 }
 
 .clockBox {
@@ -21,13 +28,14 @@
  width: 700px;
  height: 300px;
  background-color: #232323;
+ box-shadow: inset red;
 
 }
 
 .days {
  position: absolute;
- top: 80px;
- right: 50px;
+ top: 70px;
+ right: 70px;
  width: 120px;
  height: 30px;
  display: flex;
@@ -66,4 +74,28 @@
  position: absolute;
  bottom: 80px;
  right: 50px;
+}
+
+.timer {
+ width: 700px;
+ height: 300px;
+ background-color: rgb(0, 0, 0);
+ text-align: center;
+ margin-top: 10px;
+}
+
+.timerBox {
+ width: 100%;
+ height: 200px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.circleTimer {
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+ border: 5px solid gold;
+ background-color: #000;
 }
