@@ -5,8 +5,9 @@ let secondsBox = document.getElementById('secondsBox')
 let AMPMBox = document.getElementById('AMPMBox')
 let daysBox = document.getElementById('daysBox')
 
+
 // Function For Generating Time And Day
-function updateSeconds () {
+function updateTime () {
  let date = new Date() 
  let hours = date.getHours()
  let minutes = date.getMinutes()
@@ -14,11 +15,12 @@ function updateSeconds () {
  let day = date.getDay()
 
  if(hours>12){
- hoursBox.innerHTML = hours.toString().padStart(2, '0')-12
- AMPMBox.innerHTML = 'PM'
-} else {
- AMPMBox.innerHTML = 'AM'
-}
+   hoursBox.innerHTML = hours.toString().padStart(2, '0')-12   
+   AMPMBox.innerHTML = 'PM'
+  } else {
+    hoursBox.innerHTML = hours.toString().padStart(2, '0')
+    AMPMBox.innerHTML = 'AM'
+  }
  minutesBox.innerHTML = minutes.toString().padStart(2, '0')
  secondsBox.innerHTML = seconds.toString().padStart(2,'0')
  
@@ -53,7 +55,7 @@ function updateSeconds () {
 
 // Calling The Function Every Second To Update The UI
 setInterval(() => {
- updateSeconds()
+ updateTime()
 }, 1000);
 
 
