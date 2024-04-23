@@ -15,7 +15,8 @@ function updateTime () {
  let day = date.getDay()
 
  if(hours>12){
-   hoursBox.innerHTML = hours.toString().padStart(2, '0')-12   
+  let amHour = hours.toString()-12
+   hoursBox.innerHTML = amHour.toString().padStart(2, '0')
    AMPMBox.innerHTML = 'PM'
   } else {
     hoursBox.innerHTML = hours.toString().padStart(2, '0')
